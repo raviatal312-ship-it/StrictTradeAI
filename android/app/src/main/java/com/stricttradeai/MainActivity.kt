@@ -88,7 +88,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun kotakSetup(){
-        val w=LinearLayout(this).apply{orientation=LinearLayout.VERTICAL;padding(20)}
+        val w=LinearLayout(this).apply{
+    orientation=LinearLayout.VERTICAL
+    setPadding(20,20,20,20)
+}
         val token=EditText(this).apply{hint="Access Token";inputType=129}
         w.addView(token)
         w.addView(EditText(this).apply{hint="UCC / Client Code"})
